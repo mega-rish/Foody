@@ -12,55 +12,123 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet">
-    <!-- <style>
-        body{
-            margin: 0px;
-            padding: 0px;
-        }
-        .box{
-            background-image: ;
-        }
-        .navbar{
-            display: flex;
-            height: 9.5vh;
-            width: 100vw;
-            border: 2px solid green;
-            background-color: rgb(77, 71, 71);
-            opacity: 50%;
-        }
-        .navbar ul{
-            display: flex;
-            margin: 0px;
-        }
-        .navbar ul li{
-            list-style: none;
-            padding: 0px;
-            position: relative;
-            top: 4vh;
-            left: 10vw;
-            height: 3vh;
-            opacity: 100%;
-            margin-right: 8vw;
-        }
-        .navbar ul li a{
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-size: 1.5vw;
-            font-family: 'Yanone Kaffeesatz', sans-serif;
-        }
-        .navbar img{
-            opacity: 100%;
-            width: 45px;
-            height: 45px;
-            margin: 0px;
-            position: absolute;
-            top: 2vh;
-            left: 5vw;
-            padding: 0px;
-            border: 2px solid black;
-            border-radius: 100px;
-        }
-    </style> -->
+    <style>
+        /* Css reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* navigation bar */
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* navigation bar: Logo */
+.logo img{
+    border: 2px solid black;
+    border-radius: 1000px;
+    margin: 7px 49px;
+    width: 54px;
+    transition: transform 0.2s ease-in 0s;
+}
+.logo img:hover{
+    transform: scale(1.3);
+}
+
+/* navigation bar: content */
+.navbar{
+    position: relative;
+    /* position: absolute;
+    width: 100%; */
+}
+.items{
+    list-style: none;
+}
+.navbar ul{
+    display: flex;
+}
+.items a{
+    color: white;
+    border-radius: 100px;
+    text-decoration: none;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-right: 60px;
+    padding: 3px 27px;
+    display: block;
+}
+.items a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* section */
+.back{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3rem;
+    height: 100%;
+    /* position: absolute;
+    top: 0px; */
+    /* width: 100%; */
+}
+.back p{
+    width: 100%;
+}
+.btn{
+    border: 2px solid white;
+    background-color: brown;
+    font-size: 1rem;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    width: 150px;
+    opacity: 0.7;
+    
+}
+.btn:hover{
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid black;
+    opacity: .9;
+    font-weight: bold;
+}
+.back::before{
+    content: "";
+    background: url('./Back3.jpg') no-repeat center center/cover ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    opacity: .88;
+    top: 0px;
+    left: 0px;
+
+}
+
+
+
+
+
+    </style>
 </head>
 <body>
     <div class="container">
